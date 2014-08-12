@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" >
+
+<html class="no-js" lang="en" ng-app="firstApp">
 
 <head>
   <meta charset="utf-8">
@@ -16,11 +17,12 @@
 
   <script src="lib/foundation/js/vendor/modernizr.js"></script>
   <style type="text/css"> 
-    html, body{height: 100%; font-family: 'Open Sans', sans-serif; color: white;}
+    html, body{height: 100%; font-family: 'Open Sans', sans-serif; color: white; background-color:#ECF2F6}
     .main{ height: 100%}
     .main-content{padding: 0px; margin: 0px; height: 100%;width: 100%; max-width: initial;}
     .left-menu{ background: #31475A; margin: 0px; padding: 0px; height: 100%}
-    .header{margin: 0px; padding: 0px;}
+    .container{margin: 0px; padding: 0px;}
+    .container-row{ margin: 0px; padding: 0px;}
     .top-bar { padding: 10px 0px; height: auto; background: #343C48; margin: 0px;}
     .top-bar .name h1 a{ font-size: 24px; font-family: 'Open Sans', sans-serif;}
     .sidebar{padding: 10px;}
@@ -32,21 +34,22 @@
     .side-nav li.active a:not(.button){border-left:#33A3CD 3px solid; margin: -10px; font-weight: bold;}
     .side-nav li.active > a:first-child:not(.button){background:#2F3949; color: white; font-weight: bold}
     .user-info span.circle {
-      background: white url(img/emmanuel-mastronardi.jpg) center 15px no-repeat;
+      background: white url(img/emmanuel-mastronardi.jpg) center no-repeat;
       border-radius: 2.8em;
       -moz-border-radius: 2.8em;
       -webkit-border-radius: 2.8em;
       color: #fff;
       display: inline-block;
       font-weight: bold;
-      line-height: 3.6em;
+      line-height: 3em;
       text-align: center;
-      width: 3.6em; 
+      width: 3em; 
       font-size: 32px;
+      margin: 0 0 0 5px;
     }
     .user-info{
       margin: auto;
-      width: 7.6em;
+      width: 6.6em;
       margin-top: 80px;
     }
     .user-info p{
@@ -55,17 +58,19 @@
       text-align: center;
       font-weight: bold;
     }
-    
-
+    .title{
+      background: while;
+      padding: 15px;
+    }
   </style>
 </head>
-<body>
+<body ng-controller="mainController">
   <div class="off-canvas-wrap main" data-offcanvas="">
     <div class="row main-content">
-      <div class="small-2 columns left-menu">
+      <div class="show-for-large-upsmall-2 columns left-menu">
         <div class="user-info">
           <span class="circle">&nbsp;</span>
-          <p>Damian Quiroga</p>
+          <p>{{username}}</p>
         </div>
         <div class="sidebar">
           <ul class="side-nav">
@@ -78,21 +83,26 @@
         </div>
 
       </div>
-      <div class="large-10 columns header">
-        <!-- body content here -->
-        <nav class="top-bar" data-topbar>
-          <ul class="title-area">
-           <li class="name">
-             <h1><a href="#">First-Project</a></h1>
-           </li>
-          </ul>
-        </nav>
+      <div class="small-10 columns container">
+       
+          <!-- body content here -->
+          <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+             <li class="name">
+              <h1><a href="#">{{project}}</a></h1>
+            </li>
+            </ul>
+          </nav>
+          
+
       </div>
     </div>
   </div>
   <script src="lib/foundation/js/vendor/jquery.js"></script>
   <script src="lib/foundation/js/foundation.min.js"></script>
   <script src="js/foundation/foundation.topbar.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  <script src="js/main.js"></script>
   <script>
     $(document).foundation();
   </script>
