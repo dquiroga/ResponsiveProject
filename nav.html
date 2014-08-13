@@ -18,22 +18,60 @@
   <script src="lib/foundation/js/vendor/modernizr.js"></script>
   <style type="text/css">
   html, body{ height: 100%}
+  body{ background-color:#E9E9E9}
   .main{height: 100%}
   .inner-wrap{height: 100%}
   
   .main-container{height: 100%}
   .columns {padding: 0px; margin: 0px;}
-  .leftMenu{ background-color: red; height: 100%;}
-  .projectTitle{ background-color: blue; color: white; font-size: 24px}
+  .leftMenu{ background-color: #31475A; height: 100%; }
+  /*#E3E3E3*/
+  .projectTitle{ background-color: #354052; color: white; font-size: 24px; padding: 20px;}
+  [class*="block-grid-"] {margin: 0; }
+  .main-section ul li{ padding: 8px;}
+  .main-section ul li span{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    background: #fff;
+    display: block;
+    padding: 30px;
+  }
+  nav.tab-bar{ background-color: #354052}
+  .main-section h1{ margin: 0px; padding: 20px; background: white; color:#8A8A8A;}
+  .side-nav li.active > a:first-child:not(.button){background:#2F3949; color: white; font-weight: bold}
+  .user-info span.circle {
+      background: white url(img/emmanuel-mastronardi.jpg) center no-repeat;
+      border-radius: 2.8em;
+      -moz-border-radius: 2.8em;
+      -webkit-border-radius: 2.8em;
+      color: #fff;
+      display: inline-block;
+      font-weight: bold;
+      line-height: 3em;
+      text-align: center;
+      width: 3em; 
+      font-size: 32px;
+      margin: 0 0 0 5px;
+    }
+    .user-info{
+      margin: auto;
+      width: 6.6em;
+      margin-top: 80px;
+    }
+    .user-info p{
+      font-size: 10px;
+      margin: 10px 0;
+      text-align: center;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body ng-controller="mainController">
   <!--CONTENEDOR PRINCIPAL -->
 <div class="off-canvas-wrap main" data-offcanvas="">
   <div class="inner-wrap">
-      <div class="show-for-small small-12">
+      <div class="show-for-small small-12"><!--CONTENEDOR MENU VERSION SMALL-->
+           <!--MENU LATERAL DINAMICO SOLO PARA PANTALLAS CHICAS-->
            <nav class="tab-bar">
-             <!--MENU LATERAL DINAMICO SOLO PARA PANTALLAS CHICAS-->
               <section class="left-small">
                 <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
               </section>
@@ -50,7 +88,7 @@
                   <li><a href="#">Item 1</a></li>
                 </ul>
             </aside>
-      </div>
+      </div><!--FIN MENU SMALL-->
      
       <!-- close the off-canvas menu -->
       <a class="exit-off-canvas"></a>
@@ -58,18 +96,36 @@
           <!--MENU DERECHO -->
           <div class="show-for-medium-up medium-1 large-2 columns leftMenu">
             <!--SIDE MENU... COULD BE HERE -->
+            <div class="user-info show-for-large">
+              <span class="circle">&nbsp;</span>
+              <p>{{username}}</p>
+            </div>
+            <div class="sidebar show-for-large">
+              <ul class="side-nav">
+                <li class="heading">Menu</li>
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Busquedas</a></li>
+                <li><a href="#">Reportes</a></li>
+              </ul>
+            </div>
           </div>
           <!--FIN MENU -->
           <!--SECCION -->
           <div class="small-12 medium-11 large-10 columns">
             <div class="show-for-medium-up projectTitle">Project Name</div>
              <section class="main-section">
-               <!-- content goes here -->
-               <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <h1>Seccion Titulo</h1>
+               <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+                <li><span>Your content goes here</span></li>
+                <li><span>Your content goes here</span></li>
+                <li><span>Your content goes here</span></li>
+                <li><span>Your content goes here</span></li>
+                <li><span>Your content goes here</span></li>
+                <li><span>Your content goes here</span></li>
+              </ul>
               </section>
-          </div>
-          <!--FIN SECCION-->
+            </div><!--FIN SECCION-->
         </div><!--FIN ROWPEINCIPAL-->
     </div>
   </div><!--FIN DE CONTENEDOR PRINCIPAL-->    
