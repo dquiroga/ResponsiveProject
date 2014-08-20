@@ -15,19 +15,22 @@
   <!-- If you are using the gem version, you need this only -->
   <link rel="stylesheet" href="lib/foundation/css/app.css">
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,100,100italic,300,300italic,400italic,500,500italic,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <script src="lib/foundation/js/vendor/modernizr.js"></script>
   <style type="text/css">
-  html, body{}
-  body{ background-color:#E9E9E9}
+  html, body, div, h1, h2, h3, h4, p, span {font-family: 'Arimo', sans-serif;}
+  body{ background-color:#E9E9E9;font-family: 'Arimo', sans-serif;}
   .main{}
   .inner-wrap{}
   
   .main-container{}
   .columns {padding: 0px; margin: 0px;}
 
-  .leftMenu{ background-color: #31475A;height:100vh; }
+  .leftMenu{ background-color: #1F2427;height:100vh; }
   /*#E3E3E3*/
-  .projectTitle{ background-color: #354052; color: white; font-size: 24px; padding: 20px;}
+  .projectTitle{ background-color: #24B499; color: #FCFFFD; font-size: 18px; padding: 14px; font-weight: bold; width: 87%}
   [class*="block-grid-"] {margin: 0; }
   .main-section ul li{ padding: 8px;}
   .main-section ul li span{
@@ -38,33 +41,46 @@
   }
   nav.tab-bar{ background-color: #354052}
   .main-section h1{ margin: 0px; padding: 20px; background: white; color:#8A8A8A;}
-  .side-nav li.active > a:first-child:not(.button){background:#2F3949; color: white; font-weight: bold}
+  .side-nav li.active > a:first-child:not(.button) i{color:#24B499;}
+  .side-nav li.active > a:first-child:not(.button){background:#1F2427; color: white; font-weight: bold}
+  .side-nav li a:not(.button) i{color:#414649; width: 25px;}
+  .side-nav li a:not(.button){color:#AEB3B6; font-weight: bold;}
+  .side-nav li {padding-left: 5px;}
+  .side-nav li.active{padding-left: 0}
   .user-info span.circle {
-      background: white url(img/emmanuel-mastronardi.jpg) center no-repeat;
-      border-radius: 2.8em;
-      -moz-border-radius: 2.8em;
-      -webkit-border-radius: 2.8em;
+      background: white url(img/emmanuel-mastronardi.jpg) center 3px no-repeat;
+      background-size: 98% auto; 
+      border-radius: 2.0em;
+      -moz-border-radius: 2.0em;
+      -webkit-border-radius: 2.0em;
       color: #fff;
       display: inline-block;
       font-weight: bold;
-      line-height: 3em;
+      line-height: 2em;
       text-align: center;
-      width: 3em; 
+      width: 2em; 
       font-size: 32px;
-      margin: 0 0 0 5px;
+      margin: 0;
     }
     .user-info{
-      margin: auto;
-      width: 6.6em;
-      margin-top: 80px;
+      margin:40px auto;
+      text-align: center;
     }
     .user-info p{
-      font-size: 10px;
+      font-size: 12px;
       margin: 10px 0;
       text-align: center;
       font-weight: bold;
+      color: #AEB3B6;
     }
+    .side-nav li a i.fa{ margin-left: 4px; margin-right: 4px;}
     .left-off-canvas-menu {background-color: #31475A}
+    .logout{padding: 14px 0; background: black;color: gray;font-size: 14px;font-weight: bold;width: 13%; text-align: center;}
+    .menubar{ background-color: #252D2F}
+    .side-nav{font-family: 'Arimo', sans-serif; font-size: 10px}
+    .side-medium li a:not(.button){text-align: center}
+    .side-medium li a:not(.button) i{color:#414649; width: auto;}
+
   </style>
 </head>
 <body ng-controller="mainController">
@@ -113,28 +129,31 @@
               <span class="circle">&nbsp;</span>
               <p>{{username}}</p>
             </div>
-            <div class="sidebar show-for-large">
+            <div class="sidebar show-for-large menubar">
               <ul class="side-nav">
                 <li class="heading">Menu</li>
-                <li class="active"><a href="#"><i class="fa fa-bar-chart-o fa-lg">&nbsp;</i>Inicio</a></li>
-                <li><a href="#"><i class="fa fa-bar-chart-o fa-lg">&nbsp;</i>Perfil</a></li>
-                <li><a href="#"><i class="fa fa-bar-chart-o fa-lg">&nbsp;</i>Busquedas</a></li>
-                <li><a href="#"><i class="fa fa-bar-chart-o fa-lg">&nbsp;</i>Reportes</a></li>
+                <li class="active"><a href="#"><i class="fa fa-home fa-lg"></i>Inicio</a></li>
+                <li><a href="#"><i class="fa fa-user fa-lg"></i>Perfil</a></li>
+                <li><a href="#"><i class="fa fa-suitcase fa-lg"></i>Busquedas</a></li>
+                <li><a href="#"><i class="fa fa-bar-chart-o fa-lg"></i>Reportes</a></li>
               </ul>
             </div>
             <div class="sidebar show-for-medium">
-              <ul class="side-nav" style="margin-top: 25px">
-                <li class="active"><a href="#"><i class="fa fa-bar-chart-o fa-3x">&nbsp;</i></a></li>
-                <li><a href="#"><i class="fa fa-bar-chart-o fa-3x">&nbsp;</i></a></li>
-                <li><a href="#"><i class="fa fa-bar-chart-o fa-3x">&nbsp;</i></a></li>
-                <li><a href="#"><i class="fa fa-bar-chart-o fa-3x">&nbsp;</i></a></li>
+              <ul class="side-nav side-medium">
+                <li class="active"><a href="#"><i class="fa fa-home fa-3x"></i>Inicio</a></li>
+                <li><a href="#"><i class="fa fa-user fa-3x"></i>Perfil</a></li>
+                <li><a href="#"><i class="fa fa-suitcase fa-3x"></i>Busquedas</a></li>
+                <li><a href="#"><i class="fa fa-bar-chart-o fa-3x"></i>Reportes</a></li>
               </ul>
             </div>
           </div>
           <!--FIN MENU -->
           <!--SECCION -->
           <div class="small-12 medium-11 large-10 columns">
-            <div class="show-for-medium-up projectTitle">Project Name</div>
+            <div class="row show-for-medium-up ">
+            <div class="projectTitle columns"><i class="fa fa-dot-circle-o"></i>&nbsp; Project Name</div>
+            <div class="columns logout">sing out&nbsp;<i class="fa fa-power-off"></i></div>
+            </div>
              <section class="main-section">
                <h1>Seccion Titulo</h1>
                <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
