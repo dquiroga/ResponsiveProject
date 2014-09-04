@@ -1,0 +1,28 @@
+div.title-search-card{
+	border-bottom: #BCC1C4 1px solid;
+	}
+	.columns h4{
+		font-size:26px;	
+		text-transform: capitalize;
+		padding: 0px;
+		margin: 0px;
+		color:#BCC1C4;
+	}
+
+div.data-search-card{
+	border-bottom: #cdcdcd 1px solid;
+	text-align: right;
+	}
+	.columns h5{
+		font-size:22px;	
+		text-transform: capitalize;
+		padding: 0px;
+		margin: 0px;
+	}
+	.columns h6{
+		font-size:16px;	
+		text-transform: capitalize;
+		padding: 0px;
+		margin: -10px 0 0 0;
+		color:#cdcdcd;
+	}

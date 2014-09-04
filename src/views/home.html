@@ -1,0 +1,35 @@
+
+           
+<section class="main-section">
+  <h1>{{seccionName}}</h1>
+  <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+    <li ng-repeat="busqueda in busquedas">
+      <span>
+        <!--
+        <h4><i class="fa fa-clock-o"></i> {{busqueda.status}}</h4>
+        <h6>{{busqueda.company}}</h6>
+        <span>{{busqueda.name}} {{busqueda.date}}</span>
+        -->
+        <div class="row title-search-card">
+          <div class="small-6 medium-6 large-6 columns"><h4><i class="fa fa-clock-o"></i> {{busqueda.status}}</h4></div>
+          <div class="small-6 medium-6 large-6 columns end" style="text-align:right">
+            <h4>{{busqueda.cant}}</h4>
+          </div>
+        </div>
+        <div class="row data-search-card">
+          <div class="small-12 medium-12 large-12 columns"> 
+              <h5>{{busqueda.company}}</h5>
+              <h6>{{busqueda.name}}</h6>
+          </div>
+        </div>
+      </span>
+    </li>
+  </ul>
+</section>
+ <button data-dropdown="drop1" aria-controls="drop1" aria-expanded="false">Has Dropdown</button>
+<ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+              <li><a href="#">This is a link</a></li>
+              <li><a href="#">This is another</a></li>
+              <li><a href="#">Yet another</a></li>
+            </ul>
+           

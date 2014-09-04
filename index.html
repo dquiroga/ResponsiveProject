@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 
-<html class="no-js" lang="en" ng-app="firstApp">
+<html class="no-js" lang="es" ng-app="firstApp">
 
 <head>
   <meta charset="utf-8">
@@ -11,141 +11,164 @@
   <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
   <link rel="stylesheet" href="lib/foundation/css/normalize.css">
   <link rel="stylesheet" href="lib/foundation/css/foundation.css">
-  
-  <!-- If you are using the gem version, you need this only -->
-  <link rel="stylesheet" href="lib/foundation/css/app.css">
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <script src="lib/foundation/js/vendor/modernizr.js"></script>
-  <style type="text/css"> 
-    html, body{ font-family: 'Open Sans', sans-serif; color: white; background-color:#ECF2F6}
-    .main{}
-    .main-content{padding: 0px; margin: 0px; ;width: 100%; max-width: initial;}
-    .left-menu{ background: #31475A; margin: 0px; padding: 0px;}
-    .container{margin: 0px; padding: 0px;}
-    .container-row{ margin: 0px; padding: 0px;}
-    .top-bar { padding: 10px 0px; height: auto; background: #343C48; margin: 0px;}
-    .top-bar .name h1 a{ font-size: 24px; font-family: 'Open Sans', sans-serif;}
-    .sidebar{padding: 10px;}
 
-    .side-nav{ color: #A0ABBF;}
-    .side-nav li.heading{color:#607A99 ; margin:20px 0;}
-    .side-nav li a i.fa{ margin-left: 4px; margin-right: 4px;}
-    .side-nav li a:not(.button){ color: #A0ABBF; font-weight: bold;}
-    .side-nav li a:hover(.button) { color: #A0ABBF; font-weight: bold; background-color: red;}
-    .side-nav li.active a:not(.button){border-left:#33A3CD 3px solid; margin: -10px; font-weight: bold;}
-    .side-nav li.active > a:first-child:not(.button){background:red; color: white; font-weight: bold}
-    .user-info span.circle {
-      background: white url(img/emmanuel-mastronardi.jpg) center no-repeat;
-      border-radius: 2.8em;
-      -moz-border-radius: 2.8em;
-      -webkit-border-radius: 2.8em;
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,100,100italic,300,300italic,400italic,500,500italic,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <script src="lib/foundation/js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="css/home.css">
+  <style type="text/css">
+  html, body, div, h1, h2, h3, h4, p, span {font-family: 'Arimo', sans-serif;}
+  body{ background-color:#E9E9E9;font-family: 'Arimo', sans-serif;}
+  .main{}
+  .inner-wrap{}
+  
+  .main-container{}
+  .columns {padding: 0px; margin: 0px;}
+
+  .leftMenu{ background-color: #1F2427;height:100vh; }
+  /*#E3E3E3*/
+  .projectTitle{ background-color: #24B499; color: #FCFFFD; font-size: 18px; padding: 14px; font-weight: bold; width: 87%}
+  [class*="block-grid-"] {margin: 0; }
+  .main-section ul li{ padding: 8px;}
+  .main-section ul li span{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    background: #fff;
+    display: block;
+    padding: 30px;
+  }
+  nav.tab-bar{ background-color: #354052}
+  .main-section h1{ margin: 0px; padding: 20px; background: white; color:#8A8A8A;}
+  .side-nav li.active > a:first-child:not(.button) i{color:#24B499;}
+  .side-nav li.active > a:first-child:not(.button){background:#1F2427; color: white; font-weight: bold}
+  .side-nav li {margin: 0px;}
+  .side-nav li a:not(.button) i{color:#414649; width: 25px;}
+  .side-nav li a:not(.button):hover {background: #1F2427}
+  .side-nav li a:not(.button){color:#AEB3B6; font-weight: bold; padding: 10px;}
+  .side-nav li {padding-left: 5px;}
+  .side-nav li.active{padding-left: 0}
+  .user-info span.circle {
+      background: white url(img/emmanuel-mastronardi.jpg) center 3px no-repeat;
+      background-size: 98% auto; 
+      border-radius: 2.0em;
+      -moz-border-radius: 2.0em;
+      -webkit-border-radius: 2.0em;
       color: #fff;
       display: inline-block;
       font-weight: bold;
-      line-height: 3em;
+      line-height: 2em;
       text-align: center;
-      width: 3em; 
+      width: 2em; 
       font-size: 32px;
-      margin: 0 0 0 5px;
+      margin: 0;
     }
     .user-info{
-      margin: auto;
-      width: 6.6em;
-      margin-top: 80px;
+      margin:40px auto;
+      text-align: center;
     }
     .user-info p{
-      font-size: 10px;
+      font-size: 12px;
       margin: 10px 0;
       text-align: center;
       font-weight: bold;
+      color: #AEB3B6;
     }
-    .title{
-      background: while;
-      padding: 15px;
-    }
-    .top-bar ul li{ display: table;}
-    .top-bar ul li i{margin: 0 0 0 10px} 
-    .top-bar ul li h1{ display: table-cell;}
-    
+    .side-nav li a i.fa{ margin-left: 4px; margin-right: 4px;}
+    .left-off-canvas-menu {background-color: #31475A}
+    .logout{padding: 14px 0; background: black;color: gray;font-size: 14px;font-weight: bold;width: 13%; text-align: center;}
+    .menubar{ background-color: #252D2F; padding:0 0 100px 0;}
+    .side-nav{font-family: 'Arimo', sans-serif; font-size: 10px}
+    .side-medium li a:not(.button){text-align: center}
+    .side-medium li a:not(.button) i{color:#414649; width: auto;}
+
   </style>
 </head>
 <body ng-controller="mainController">
-  
-      
-  <div class="off-canvas-wrap main" data-offcanvas="">
-    <div class="inner-wrap">
-        <nav class="tab-bar show-for-small">
-         <section class="left-small">
-            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-          </section>
+  <!--CONTENEDOR PRINCIPAL -->
+<div class="off-canvas-wrap main" data-offcanvas="">
+  <div class="inner-wrap">
+      <div class="show-for-small small-12"><!--CONTENEDOR MENU VERSION SMALL-->
+           <!--MENU LATERAL DINAMICO SOLO PARA PANTALLAS CHICAS-->
+           <nav class="tab-bar">
+              <section class="left-small">
+                <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+              </section>
 
-          <section class="middle tab-bar-section">
-           <h1 class="title">Criterium</h1>
-          </section>
-        </nav>
+              <section class="middle tab-bar-section">
+                <h1 class="title">Project Name</h1>
+              </section>
+            </nav>
 
-        <aside class="left-off-canvas-menu">
-          <ul class="off-canvas-list">
-            <li><label>Criterium</label></li>
-            <li><a href="#">The Psychohistorians</a></li>
-            <li><a href="#">...</a></li>
-          </ul>
-        </aside>
-       
-      <div class="row main-content">
-
-        <div class="show-for-medium-up large-2 medium-1 columns left-menu">
-          <div class="show-for-large-up">
-            <div class="user-info">
+            <!-- Off Canvas Menu -->
+            <aside class="left-off-canvas-menu">
+                <!-- whatever you want goes here -->
+                <!--SIDE MENU... COULD BE HERE -->
+                <div class="user-info">
+                  <span class="circle">&nbsp;</span>
+                  <p>{{username}}</p>
+                </div>
+                <div class="sidebar">
+                  <ul class="side-nav">
+                    <li class="heading">Menu</li>
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Busquedas</a></li>
+                    <li><a href="#">Reportes</a></li>
+                  </ul>
+                </div>
+            </aside>
+      </div><!--FIN MENU SMALL-->
+     
+      <!-- close the off-canvas menu -->
+      <a class="exit-off-canvas"></a>
+      <div class="row main-container"><!--ROWPEINCIPAL-->
+          <!--MENU DERECHO -->
+          <div class="show-for-medium-up medium-1 large-2 columns leftMenu">
+            <!--SIDE MENU... COULD BE HERE -->
+            <div class="user-info show-for-large">
               <span class="circle">&nbsp;</span>
               <p>{{username}}</p>
             </div>
-            <div class="sidebar">
+            <div class="sidebar show-for-large menubar">
               <ul class="side-nav">
                 <li class="heading">Menu</li>
-                <li class="active"><a href="#">Inicio</a></li>
-                <li><a href="#">Perfil</a></li>
-                <li><a href="#">Busquedas</a></li>
-                <li><a href="#">Reportes</a></li>
+                <li class="active"><a href="#"><i class="fa fa-home fa-lg"></i>Inicio</a></li>
+                <li><a href="#"><i class="fa fa-user fa-lg"></i>Perfil</a></li>
+                <li><a href="#"><i class="fa fa-suitcase fa-lg"></i>Busquedas</a></li>
+                <li><a href="#"><i class="fa fa-bar-chart-o fa-lg"></i>Reportes</a></li>
+              </ul>
+            </div>
+            <div class="sidebar show-for-medium">
+              <ul class="side-nav side-medium">
+                <li class="active"><a href="#"><i class="fa fa-home fa-3x"></i>Inicio</a></li>
+                <li><a href="#"><i class="fa fa-user fa-3x"></i>Perfil</a></li>
+                <li><a href="#"><i class="fa fa-suitcase fa-3x"></i>Busquedas</a></li>
+                <li><a href="#"><i class="fa fa-bar-chart-o fa-3x"></i>Reportes</a></li>
               </ul>
             </div>
           </div>
-        </div>
-         <div class="large-10 medium-11 columns container">
-            <!-- body content here -->
-            <nav class="top-bar show-for-medium-up">
-             <ul class="title-area">
-               <li class="name">
-                  <h1><a href="#">{{project}}</a></h1>
-                </li>
-              </ul>
-            </nav>
-
-          
-         
-          <section class="main-section">
-          <!-- content goes here -->
-          
-            <h2>THE PSYCHOHISTORIANS</h2>
-
-            Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying in ways that parallel the decline of the Western Roman Empire. Hari Seldon, a mathematician and psychologist, has developed psychohistory, a new field of science and psychology that equates all possibilities in large societies to mathematics, allowing for the prediction of future events.
-
-            Using psychohistory, Seldon has discovered the declining nature of the Empire, angering the aristocratic members of the Committee of Public Safety, the de facto rulers of the Empire. The Committee considers Seldon's views and statements treasonous, and he is arrested along with young mathematician Gaal Dornick, who has arrived on Trantor to meet Seldon. Seldon is tried by the Committee and defends his beliefs, explaining his theories and predictions, including his belief that the Empire will collapse in 500 years and enter a 30,000-year dark age, to the Committee's members.
-        
-
-           </section>
+          <!--FIN MENU -->
+          <!--SECCION -->
+          <div class="small-12 medium-11 large-10 columns">
+            <div class="row show-for-medium-up ">
+            <div class="projectTitle columns"><i class="fa fa-dot-circle-o"></i>&nbsp; {{ project }}</div>
+            <div class="columns logout">sing out&nbsp;<i class="fa fa-power-off"></i></div>
+            </div>
+            <div ng-view></div>
           </div>
-      </div>
-
-        <a class="exit-off-canvas"></a>
-        
+        </div><!--FIN ROWPEINCIPAL-->
     </div>
-  </div>
+  </div><!--FIN DE CONTENEDOR PRINCIPAL-->    
+
   <script src="lib/foundation/js/vendor/jquery.js"></script>
   <script src="lib/foundation/js/foundation.min.js"></script>
-  <script src="js/foundation/foundation.topbar.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="lib/foundation/js/foundation/foundation.dropdown.js"></script>
+  <script src="lib/foundation/js/foundation/foundation.topbar.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.7/angular.min.js"></script>  
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.3/angular-route.js"></script> 
+  <script src="src/app.js"></script>
+  <script src="src/controllers/home.js"></script>
   <script>
     $(document).foundation();
   </script>
